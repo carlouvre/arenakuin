@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/primary"
+            app:title="Booking Venue"
+            app:titleTextColor="@android:color/white">
+
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="start"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_arrow_back"
+                app:tint="@android:color/white"
+                android:contentDescription="Kembali" />
+
+        </com.google.android.material.appbar.MaterialToolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tv_venue_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Nama Venue Disini"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="24dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pilih Tanggal"
+                android:textColor="#666666"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_selected_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Belum dipilih"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:padding="12dp"
+                android:background="#F0F0F0"
+                android:layout_marginTop="8dp"/>
+
+            <Button
+                android:id="@+id/btn_select_date"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PILIH TANGGAL"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/primary"
+                app:strokeColor="@color/primary"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mulai"
+                        android:textColor="#666666"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tv_start_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="--:--"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:padding="12dp"
+                        android:background="#F0F0F0"
+                        android:layout_marginTop="8dp"/>
+
+                    <Button
+                        android:id="@+id/btn_select_start_time"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="PILIH"
+                        android:layout_marginTop="4dp"
+                        android:textColor="@color/primary"
+                        app:strokeColor="@color/primary"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Selesai"
+                        android:textColor="#666666"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tv_end_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="--:--"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:padding="12dp"
+                        android:background="#F0F0F0"
+                        android:layout_marginTop="8dp"/>
+
+                    <Button
+                        android:id="@+id/btn_select_end_time"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="PILIH"
+                        android:layout_marginTop="4dp"
+                        android:textColor="@color/primary"
+                        app:strokeColor="@color/primary"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp"
+                android:background="#E0E0E0"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rincian Biaya"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Harga per Jam"
+                    android:textColor="#666666"/>
+                <TextView
+                    android:id="@+id/tv_price_per_hour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Rp 50.000"
+                    android:textColor="#333333"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Durasi"
+                    android:textColor="#666666"/>
+                <TextView
+                    android:id="@+id/tv_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 jam"
+                    android:textColor="#333333"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:background="#E0E0E0"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Total Tagihan"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"/>
+                <TextView
+                    android:id="@+id/tv_total_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp 0"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/primary"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_confirm_booking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="16dp"
+                android:text="KONFIRMASI BOOKING"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                app:backgroundTint="@color/primary"
+                android:padding="12dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

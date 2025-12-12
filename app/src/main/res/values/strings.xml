@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ArenaKu.in</string>
+    <string name="tagline">Book Your Favorite Sport Venue</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_explore">Explore</string>
+    <string name="nav_bookings">Bookings</string>
+    <string name="nav_favorites">Favorites</string>
+    <string name="nav_profile">Profile</string>
+
+    <!-- Categories -->
+    <string name="category_basket">Basket</string>
+    <string name="category_futsal">Futsal</string>
+    <string name="category_padel">Padel</string>
+    <string name="category_badminton">Badminton</string>
+    <string name="category_voli">Voli</string>
+    <string name="category_gym">Gym &amp; Yoga</string>
+
+    <!-- Actions -->
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="book_now">Book Now</string>
+    <string name="confirm_booking">Confirm Booking</string>
+    <string name="pay_now">Pay Now</string>
+    <string name="search">Search</string>
+    <string name="filter">Filter</string>
+
+    <!-- Hints -->
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="name_hint">Full Name</string>
+    <string name="phone_hint">Phone Number</string>
+
+    <!-- Messages -->
+    <string name="login_success">Login successful!</string>
+    <string name="register_success">Registration successful!</string>
+    <string name="booking_success">Booking confirmed!</string>
+    <string name="payment_success">Payment successful!</string>
+</resources>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ArenaKuIn"
+        tools:targetApi="31">
+
+        <!-- Splash Activity -->
+        <activity
+            android:name="com.example.arenakuin.activities.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.ArenaKuIn.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Authentication Activities -->
+        <activity
+            android:name="com.example.arenakuin.activities.LoginActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name="com.example.arenakuin.activities.RegisterActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Customer Main Activity -->
+        <activity
+            android:name="com.example.arenakuin.activities.MainActivity"
+            android:label="@string/app_name" />
+
+        <!-- Admin Main Activity -->
+        <activity
+            android:name="com.example.arenakuin.activities.AdminMainActivity"
+            android:label="Admin Dashboard" />
+
+        <!-- Venue Activities -->
+        <activity
+            android:name="com.example.arenakuin.activities.VenueDetailActivity"
+            android:parentActivityName="com.example.arenakuin.activities.MainActivity" />
+
+        <!-- Booking Activities -->
+        <activity
+            android:name="com.example.arenakuin.activities.BookingActivity"
+            android:parentActivityName="com.example.arenakuin.activities.VenueDetailActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name="com.example.arenakuin.activities.PaymentActivity"
+            android:parentActivityName="com.example.arenakuin.activities.BookingActivity" />
+
+        <!-- Admin Activities -->
+        <activity
+            android:name="com.example.arenakuin.activities.AdminCreateBookingActivity"
+            android:parentActivityName="com.example.arenakuin.activities.AdminMainActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:label="Buat Booking Manual" />
+
+    </application>
+
+</manifest>
