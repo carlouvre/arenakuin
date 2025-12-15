@@ -33,13 +33,12 @@ import java.util.Locale;
 
 public class AdminCreateBookingActivity extends AppCompatActivity {
 
-    // UI Components (Sesuai XML Anda)
+    // UI Components
     private Spinner spinnerVenue;
     private EditText etCustomerName, etCustomerPhone, etCustomerEmail, etNotes;
     private TextView tvSelectedDate, tvStartTime, tvEndTime, tvDuration, tvPricePerHour, tvTotalPrice;
     private Button btnSelectDate, btnSelectStartTime, btnSelectEndTime, btnCreateBooking;
     private RadioGroup rgBookingType, rgPaymentMethod;
-    // rbOffline tidak perlu dijadikan field class jika tidak diakses di luar onCreate
 
     // Database & Logic
     private DatabaseHelper dbHelper;
@@ -60,6 +59,11 @@ public class AdminCreateBookingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_create_booking);
 
+        // --- FIX HEADER DOUBLE: Sembunyikan Action Bar bawaan ---
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+
         dbHelper = new DatabaseHelper(this);
         sessionManager = new SessionManager(this);
         selectedDate = Calendar.getInstance();
@@ -73,7 +77,7 @@ public class AdminCreateBookingActivity extends AppCompatActivity {
         ImageButton btnBack = findViewById(R.id.btn_back);
         btnBack.setOnClickListener(v -> finish());
 
-        // ID SESUAI XML ANDA
+        // Pastikan ID ini sama persis dengan yang ada di XML Anda
         spinnerVenue = findViewById(R.id.spinner_venue);
         etCustomerName = findViewById(R.id.et_customer_name);
         etCustomerPhone = findViewById(R.id.et_customer_phone);
@@ -90,14 +94,12 @@ public class AdminCreateBookingActivity extends AppCompatActivity {
         btnSelectDate = findViewById(R.id.btn_select_date);
         btnSelectStartTime = findViewById(R.id.btn_select_start_time);
         btnSelectEndTime = findViewById(R.id.btn_select_end_time);
-
-        // ID SESUAI XML ANDA
         btnCreateBooking = findViewById(R.id.btn_create_booking);
 
         rgBookingType = findViewById(R.id.rg_booking_type);
         rgPaymentMethod = findViewById(R.id.rg_payment_method);
 
-        // Set default radio button
+        // Set default radio button ke Offline jika ada
         RadioButton rbOffline = findViewById(R.id.rb_offline);
         if (rbOffline != null) rbOffline.setChecked(true);
     }
@@ -186,7 +188,6 @@ public class AdminCreateBookingActivity extends AppCompatActivity {
             return;
         }
 
-        // Handle format jam "08.00" -> "08"
         int openHour = 8;
         if (selectedVenue != null) {
             try {

@@ -286,17 +286,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 "Jl. Puncak Mandala No. 42, Pisang Candi, Kec. Sukun",
                 200000, "Indoor Padel Pertama di Malang, Tribun", "padel_mandala_sc", 4.5, "07.00", "22.00");
 
-        insertVenue(db, "Unggul SC Padel", "Padel",
-                "Jl. Raya Karanglo No. 84, Singosari",
-                200000, "Fasilitas Lengkap, International Standard", "padel_unggul_sc", 4.9, "06.00", "22.00");
-
-        insertVenue(db, "Terra Padel Ground", "Padel",
-                "Jl. Candi Kalasan I No. 10, Blimbing, Kota Malang",
-                220000, "Modern Court, Shower, Locker Room", "padel_terra", 4.7, "06.00", "22.00");
-
-        insertVenue(db, "Lapangan Padel UM", "Padel",
-                "Universitas Negeri Malang, Jl. Semarang No. 5, Sumbersari",
-                150000, "Area Kampus, Terjangkau, Outdoor", "padel_um", 4.4, "06.00", "21.00");
 
         // ================= VOLI =================
         insertVenue(db, "GOR Ken Arok", "Voli",
@@ -307,17 +296,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 "Jl. Raya Karanglo No. 84, Singosari",
                 120000, "Lantai Kayu/Parquet Premium, Fasilitas Top", "voli_unggul_sc", 4.7, "06.00", "23.00");
 
-        insertVenue(db, "Voli GOR Gajayana", "Voli",
-                "Jl. Tenes, Kauman, Kec. Klojen, Kota Malang",
-                50000, "Outdoor, Pusat Kota, Akses Mudah", "voli_gajayana", 4.2, "06.00", "18.00");
-
-        insertVenue(db, "Lapangan Voli UM", "Voli",
-                "Kompleks Olahraga UM, Jl. Semarang No. 5, Lowokwaru",
-                75000, "Standar Mahasiswa, Outdoor Rapi", "voli_um", 4.4, "06.00", "21.00");
-
-        insertVenue(db, "Taman Gayam Voli", "Voli",
-                "Jl. Kawi No. 1a, Kauman, Kec. Klojen, Kota Malang",
-                40000, "Outdoor, Sejuk Banyak Pohon, Merakyat", "voli_gayam", 4.1, "06.00", "17.00");
     }
 
     // --- Helper for seeding ---
